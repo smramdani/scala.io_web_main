@@ -63,8 +63,8 @@ module.exports = function(grunt) {
                 ,"echo \"rmdir _site\""
                 ,"rmdir _site"
                 ,"git add -A && git commit -m \"Publish ppd\" || true"
-                ,"echo \"git push -f git+ssh://git@push.clever-cloud.com/app_a65547d6-35fd-43fb-9e65-62e876a41c50 publish-ppd:master\""
-                ,"git push -f git+ssh://git@push.clever-cloud.com/app_a65547d6-35fd-43fb-9e65-62e876a41c50 publish-ppd:master"
+                ,"echo \"git push -f git+ssh://git@push-par-clevercloud-customers.services.clever-cloud.com/app_9c4640d9-c4ae-4b93-8a00-99ca579faf33.git publish-ppd:master\""
+                ,"git push -f git+ssh://git@push-par-clevercloud-customers.services.clever-cloud.com/app_9c4640d9-c4ae-4b93-8a00-99ca579faf33.git publish-ppd:master"
                 ,"git checkout scalaio-2017"
                 ,"git clean -fd"
                 //,"npm install"
@@ -85,8 +85,8 @@ module.exports = function(grunt) {
                 ,"find . -maxdepth 1 ! -name '.' ! -name '.git*' ! -name 'node_modules' ! -name 'bower_components' ! -name '_site' -exec rm -rf {} +"
                 ,"find _site -maxdepth 1 -exec mv {} . \\;"
                 ,"rmdir _site"
-                ,"git add -A && git commit -m \"Publish\" || true"
-                ,"git push -f git+ssh://git@push.clever-cloud.com/app_92ecb1de-67ea-442c-9178-8eea2eca7690.git publish:master"
+                ,"git add -A && git commit -m \"publish\" || true"
+                ,"git push -f git+ssh://git@push-par-clevercloud-customers.services.clever-cloud.com/app_c38f99ce-dbe0-4103-82d0-bd0c6d4a3d27.git publish:master"
                 ,"git checkout scalaio-2017"
                 ,"git clean -fd"
                 //,"npm install"
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
               options: {
                   stdout: true,
                   stderr: true,
-                  failOnError: true
+                  failonerror: true
               }
             }
         },
